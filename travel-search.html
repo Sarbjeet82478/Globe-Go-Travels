@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel Search Engine | Globe Go Travels</title>
+  <meta name="description" content="Search flights, hotels, vacation packages, car rentals, cruises, and activities with Globe Go Travels. Built for a future secure backend connection to approved Expedia TAAP or Expedia Group travel inventory." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Globe Go Travels home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2Z"/></svg></span>
+        <span class="brand-text"><span>Globe Go Travels</span><span>Online travel agency</span></span>
+      </a>
+      <div class="nav-wrap">
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a class="nav-link" data-nav-link href="index.html">Home</a>
+          <a class="nav-link" data-nav-link href="travel-search.html?service=flights">Flights</a>
+          <a class="nav-link" data-nav-link href="vacation-packages.html">Vacation Packages</a>
+          <a class="nav-link" data-nav-link href="hotels.html">Hotels</a>
+          <a class="nav-link" data-nav-link href="cruises.html">Cruises</a>
+          <a class="nav-link" data-nav-link href="car-rentals.html">Car Rentals</a>
+          <a class="nav-link" data-nav-link href="honeymoon-travel.html">Honeymoon</a>
+          <a class="nav-link" data-nav-link href="travel-deals.html">Travel Deals</a>
+          <a class="nav-link" data-nav-link href="request-a-quote.html">Request a Quote</a>
+          <a class="nav-link" data-nav-link href="contact-us.html">Contact</a>
+          <details class="nav-more">
+            <summary>More</summary>
+            <div class="nav-dropdown">
+              <a data-nav-link href="travel-search.html?service=hotels">Hotel Search</a>
+              <a data-nav-link href="travel-search.html?service=packages">Package Search</a>
+              <a data-nav-link href="travel-search.html?service=cars">Car Search</a>
+              <a data-nav-link href="travel-search.html?service=cruises">Cruise Search</a>
+              <a data-nav-link href="travel-search.html?service=activities">Activities</a>
+              <a data-nav-link href="business-tools.html">Business Tools</a>
+              <a data-nav-link href="iata-legal-policies.html">IATA Legal Policies</a>
+              <a data-nav-link href="about-us.html">About Us</a>
+              <a data-nav-link href="faq.html">FAQ</a>
+            </div>
+          </details>
+        </nav>
+        <a class="btn btn-primary nav-cta" href="travel-search.html?service=flights">Search Travel</a>
+        <button class="nav-toggle" type="button" data-menu-toggle aria-label="Open mobile menu" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-nav" data-mobile-nav>
+      <div class="container mobile-nav-inner">
+        <div class="mobile-nav-grid">
+          <a data-nav-link href="index.html">Home</a>
+          <a data-nav-link href="travel-search.html?service=flights">Flights</a>
+          <a data-nav-link href="travel-search.html?service=hotels">Hotels</a>
+          <a data-nav-link href="travel-search.html?service=packages">Vacation Packages</a>
+          <a data-nav-link href="travel-search.html?service=cars">Car Rentals</a>
+          <a data-nav-link href="travel-search.html?service=cruises">Cruises</a>
+          <a data-nav-link href="travel-search.html?service=activities">Activities</a>
+          <a data-nav-link href="travel-deals.html">Travel Deals</a>
+          <a data-nav-link href="request-a-quote.html">Request a Quote</a>
+          <a data-nav-link href="contact-us.html">Contact Us</a>
+          <a data-nav-link href="about-us.html">About Us</a>
+          <a data-nav-link href="faq.html">FAQ</a>
+        </div>
+        <a class="btn btn-primary" href="travel-search.html?service=flights">Search Travel</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-banner" style="--banner-image: url('https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1600&q=80');">
+          <div>
+            <span class="eyebrow">Search Engine</span>
+            <h1 class="page-title">Search flights, hotels, packages, cars, cruises, and activities</h1>
+            <p class="page-copy">A passenger-facing search page built for a future secure backend connection to approved Expedia TAAP or Expedia Group inventory. Live supplier credentials must stay on the server.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container search-engine">
+        <div class="search-tabs" role="tablist" aria-label="Travel search products">
+          <button class="search-tab" type="button" role="tab" data-search-tab="flights">Flights</button>
+          <button class="search-tab" type="button" role="tab" data-search-tab="hotels">Hotels</button>
+          <button class="search-tab" type="button" role="tab" data-search-tab="packages">Packages</button>
+          <button class="search-tab" type="button" role="tab" data-search-tab="cars">Cars</button>
+          <button class="search-tab" type="button" role="tab" data-search-tab="cruises">Cruises</button>
+          <button class="search-tab" type="button" role="tab" data-search-tab="activities">Activities</button>
+        </div>
+
+        <div class="search-status" data-search-status></div>
+
+        <section class="search-panel" data-search-panel="flights">
+          <form data-search-form data-product="flights">
+            <div class="form-grid">
+              <div class="field"><label for="flight-from">From</label><input id="flight-from" name="from" type="text" placeholder="Departure city or airport" autocomplete="off" data-location-autocomplete required /></div>
+              <div class="field"><label for="flight-to">To</label><input id="flight-to" name="to" type="text" placeholder="Destination city or airport" autocomplete="off" data-location-autocomplete required /></div>
+              <div class="field"><label for="flight-depart">Departure Date</label><input id="flight-depart" name="departureDate" type="date" required /></div>
+              <div class="field"><label for="flight-return">Return Date</label><input id="flight-return" name="returnDate" type="date" /></div>
+              <div class="field"><label for="flight-trip">Trip Type</label><select id="flight-trip" name="tripType"><option>Round trip</option><option>One way</option><option>Multi-city</option></select></div>
+              <div class="field"><label for="flight-travelers">Travelers</label><input id="flight-travelers" name="travelers" type="number" min="1" value="1" required /></div>
+              <div class="field"><label for="flight-cabin">Cabin</label><select id="flight-cabin" name="cabin"><option>Economy</option><option>Premium Economy</option><option>Business</option><option>First</option></select></div>
+              <div class="field"><label for="flight-airline">Preferred Airline</label><input id="flight-airline" name="preferredAirline" type="text" placeholder="Optional" /></div>
+            </div>
+            <div class="search-actions"><button class="btn btn-primary" type="submit">Search Flights</button><a class="btn btn-secondary" href="request-a-quote.html">Ask an Agent</a></div>
+          </form>
+        </section>
+
+        <section class="search-panel" data-search-panel="hotels">
+          <form data-search-form data-product="hotels">
+            <div class="form-grid">
+              <div class="field"><label for="hotel-destination">Destination</label><input id="hotel-destination" name="destination" type="text" autocomplete="off" data-location-autocomplete required /></div>
+              <div class="field"><label for="hotel-rating">Hotel Rating</label><select id="hotel-rating" name="rating"><option>Any</option><option>3 star</option><option>4 star</option><option>5 star</option></select></div>
+              <div class="field"><label for="hotel-checkin">Check-in</label><input id="hotel-checkin" name="checkIn" type="date" required /></div>
+              <div class="field"><label for="hotel-checkout">Check-out</label><input id="hotel-checkout" name="checkOut" type="date" required /></div>
+              <div class="field"><label for="hotel-rooms">Rooms</label><input id="hotel-rooms" name="rooms" type="number" min="1" value="1" required /></div>
+              <div class="field"><label for="hotel-guests">Guests</label><input id="hotel-guests" name="guests" type="number" min="1" value="2" required /></div>
+            </div>
+            <div class="search-actions"><button class="btn btn-primary" type="submit">Search Hotels</button><a class="btn btn-secondary" href="request-a-quote.html">Ask an Agent</a></div>
+          </form>
+        </section>
+
+        <section class="search-panel" data-search-panel="packages">
+          <form data-search-form data-product="packages">
+            <div class="form-grid">
+              <div class="field"><label for="package-from">From</label><input id="package-from" name="from" type="text" autocomplete="off" data-location-autocomplete required /></div>
+              <div class="field"><label for="package-destination">Destination</label><input id="package-destination" name="destination" type="text" autocomplete="off" data-location-autocomplete required /></div>
+              <div class="field"><label for="package-depart">Departure Date</label><input id="package-depart" name="departureDate" type="date" required /></div>
+              <div class="field"><label for="package-return">Return Date</label><input id="package-return" name="returnDate" type="date" required /></div>
+              <div class="field"><label for="package-type">Package Type</label><select id="package-type" name="packageType"><option>Flight + Hotel</option><option>All-Inclusive</option><option>Family Vacation</option><option>Honeymoon</option></select></div>
+              <div class="field"><label for="package-budget">Budget</label><input id="package-budget" name="budget" type="text" placeholder="CA$" /></div>
+            </div>
+            <div class="search-actions"><button class="btn btn-primary" type="submit">Search Packages</button><a class="btn btn-secondary" href="request-a-quote.html">Ask an Agent</a></div>
+          </form>
+        </section>
+
+        <section class="search-panel" data-search-panel="cars">
+          <form data-search-form data-product="cars">
+            <div class="form-grid">
+              <div class="field"><label for="car-pickup">Pickup Location</label><input id="car-pickup" name="pickupLocation" type="text" autocomplete="off" data-location-autocomplete required /></div>
+              <div class="field"><label for="car-dropoff">Drop-off Location</label><input id="car-dropoff" name="dropoffLocation" type="text" autocomplete="off" data-location-autocomplete /></div>
+              <div class="field"><label for="car-pickup-date">Pickup Date</label><input id="car-pickup-date" name="pickupDate" type="date" required /></div>
+              <div class="field"><label for="car-dropoff-date">Drop-off Date</label><input id="car-dropoff-date" name="dropoffDate" type="date" required /></div>
+              <div class="field"><label for="car-type">Vehicle Type</label><select id="car-type" name="vehicleType"><option>Any</option><option>Compact</option><option>SUV</option><option>Minivan</option><option>Luxury</option></select></div>
+              <div class="field"><label for="car-age">Driver Age</label><input id="car-age" name="driverAge" type="number" min="18" value="30" required /></div>
+            </div>
+            <div class="search-actions"><button class="btn btn-primary" type="submit">Search Cars</button><a class="btn btn-secondary" href="request-a-quote.html">Ask an Agent</a></div>
+          </form>
+        </section>
+
+        <section class="search-panel" data-search-panel="cruises">
+          <form data-search-form data-product="cruises">
+            <div class="form-grid">
+              <div class="field"><label for="cruise-destination">Destination</label><input id="cruise-destination" name="destination" type="text" placeholder="Caribbean, Europe, Alaska" autocomplete="off" data-location-autocomplete required /></div>
+              <div class="field"><label for="cruise-month">Sailing Month</label><input id="cruise-month" name="sailingMonth" type="month" required /></div>
+              <div class="field"><label for="cruise-duration">Duration</label><select id="cruise-duration" name="duration"><option>Any</option><option>3-5 nights</option><option>6-8 nights</option><option>9-14 nights</option><option>15+ nights</option></select></div>
+              <div class="field"><label for="cruise-cabin">Cabin Type</label><select id="cruise-cabin" name="cabin"><option>Any</option><option>Inside</option><option>Ocean View</option><option>Balcony</option><option>Suite</option></select></div>
+              <div class="field"><label for="cruise-travelers">Travelers</label><input id="cruise-travelers" name="travelers" type="number" min="1" value="2" required /></div>
+              <div class="field"><label for="cruise-line">Preferred Cruise Line</label><input id="cruise-line" name="cruiseLine" type="text" placeholder="Optional" /></div>
+            </div>
+            <div class="search-actions"><button class="btn btn-primary" type="submit">Search Cruises</button><a class="btn btn-secondary" href="request-a-quote.html">Ask an Agent</a></div>
+          </form>
+        </section>
+
+        <section class="search-panel" data-search-panel="activities">
+          <form data-search-form data-product="activities">
+            <div class="form-grid">
+              <div class="field"><label for="activity-destination">Destination</label><input id="activity-destination" name="destination" type="text" autocomplete="off" data-location-autocomplete required /></div>
+              <div class="field"><label for="activity-date">Activity Date</label><input id="activity-date" name="activityDate" type="date" required /></div>
+              <div class="field"><label for="activity-type">Activity Type</label><select id="activity-type" name="activityType"><option>Any</option><option>Food and wine</option><option>City tour</option><option>Transfers</option><option>Family activities</option><option>Romantic experiences</option></select></div>
+              <div class="field"><label for="activity-travelers">Travelers</label><input id="activity-travelers" name="travelers" type="number" min="1" value="2" required /></div>
+            </div>
+            <div class="search-actions"><button class="btn btn-primary" type="submit">Search Activities</button><a class="btn btn-secondary" href="request-a-quote.html">Ask an Agent</a></div>
+          </form>
+        </section>
+
+        <div class="integration-note">
+          This page is TAAP/API-ready. When backend credentials are approved, the forms should call <strong>/api/taap/search</strong>, and the server should authenticate with the approved Expedia TAAP, Expedia Group Rapid API, or booking platform integration. Do not put TAAP login details in front-end JavaScript.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: linear-gradient(180deg, rgba(38,63,69,0.04), rgba(38,63,69,0.01));">
+      <div class="container results-layout">
+        <aside class="filter-panel">
+          <h2>Filter sample results</h2>
+          <div class="filter-list">
+            <label><input type="checkbox" checked /> Recommended</label>
+            <label><input type="checkbox" /> Refundable</label>
+            <label><input type="checkbox" /> Family friendly</label>
+            <label><input type="checkbox" /> Premium options</label>
+            <label><input type="checkbox" /> Best value</label>
+          </div>
+        </aside>
+        <div>
+          <div class="section-header">
+            <span class="eyebrow" data-product-label>Flights</span>
+            <h2 class="section-title">Search results preview</h2>
+            <p class="section-copy">These are sample cards. Live pricing, availability, taxes, supplier rules, and booking links require backend inventory integration.</p>
+          </div>
+          <div class="search-results" data-search-results></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2Z"/></svg></span><span class="brand-text"><span>Globe Go Travels</span><span>Online travel planning</span></span></a>
+          <p class="section-copy" style="margin-top: 1rem;">An online travel agency for flights, hotels, packages, cruises, cars, and custom planning.</p>
+        </div>
+        <div><h3 class="footer-heading">Search</h3><div class="footer-links"><a href="travel-search.html?service=flights">Flights</a><a href="travel-search.html?service=hotels">Hotels</a><a href="travel-search.html?service=packages">Packages</a><a href="travel-search.html?service=cars">Cars</a></div></div>
+        <div><h3 class="footer-heading">Business</h3><div class="footer-links"><a href="business-tools.html">Business Tools</a><a href="payment.html">Payment</a><a href="pnr-lookup.html">PNR Lookup</a><a href="iata-legal-policies.html">IATA Legal Policies</a></div></div>
+        <div><h3 class="footer-heading">Contact</h3><div class="footer-links"><span>Online service across Canada</span><span>info@globegotravels.com</span><span>+1 (236) 687-7079</span></div></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-current-year>2026</span> Globe Go Travels. All rights reserved.</span><span>Travel search engine | Backend integration required</span></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/chatbot.js"></script>
+  <script src="assets/js/travel-search.js"></script>
+</body>
+</html>
